@@ -21,7 +21,7 @@ The site is statically exported to `out/` (see `next.config.mjs`).
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at https://eruerawest-cyber.github.io/eruwest/ (repo Settings → Pages → Source must be "GitHub Actions"). The static export also deploys to Vercel as-is.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at https://eruwest.com (custom domain configured in repo Settings → Pages; Source must be "GitHub Actions"). The static export also deploys to Vercel as-is.
 
 ## Structure
 

@@ -4,7 +4,7 @@ import StatCard from "./StatCard";
 const stats = [
   { value: "13+", label: "years of senior communications experience" },
   { value: "2", label: "public & private sectors, many industries" },
-  { value: "4", label: "ways to engage, from strategy to coaching" },
+  { value: "5", label: "services, from strategy to AI visibility" },
   { value: "1:1", label: "a single, senior point of contact throughout" },
 ];
 

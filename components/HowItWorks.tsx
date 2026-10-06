@@ -5,17 +5,17 @@ const steps = [
   {
     title: "A free chat",
     description:
-      "We talk through what you're working on and where communications is stretched. No pitch, just a clear sense of whether I can help.",
+      "We talk through what you’re working on and where support would help.",
   },
   {
-    title: "A clear plan",
+    title: "A clear scope",
     description:
-      "A focused review and a practical plan: what to prioritise, what to stop, and how to make the most of the capacity you have.",
+      "We agree the priorities, outputs, fee and how we’ll work together.",
   },
   {
-    title: "Steady delivery",
+    title: "Practical delivery",
     description:
-      "Hands-on delivery and promotion structured around agreed outputs and timeframes, building your team's capability as we go.",
+      "I carry out the agreed work, with clear approvals and regular contact.",
   },
 ];
 

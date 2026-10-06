@@ -14,14 +14,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const description =
+  "Clear communications, from strategy to delivery. Senior advice, hands-on support and practical systems for organisations, based in Tairāwhiti, Gisborne.";
+
 export const metadata: Metadata = {
-  title: "Eru West · Strategy & Communications · Tairāwhiti",
-  description:
-    "Communications that cut through, without the agency overhead. Senior strategy and hands-on delivery for organisations with complex, evolving communications needs.",
+  metadataBase: new URL("https://eruwest.com"),
+  title: {
+    default: "Eru West · Strategy & Communications · Tairāwhiti",
+    template: "%s · Eru West",
+  },
+  description,
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Eru West · Strategy & Communications",
-    description:
-      "Communications that cut through, without the agency overhead. Senior strategy and hands-on delivery, based in Tairāwhiti, Gisborne.",
+    description,
+    url: "/",
     type: "website",
     locale: "en_NZ",
     siteName: "Eru West · Strategy & Communications",

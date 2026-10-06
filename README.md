@@ -1,6 +1,6 @@
 # Eru West · Strategy & Communications
 
-Single-page consulting website for Eru West, built with Next.js (App Router, TypeScript) and Tailwind CSS.
+Consulting website for Eru West (homepage plus five service pages), built with Next.js (App Router, TypeScript) and Tailwind CSS.
 
 ## Getting started
 
@@ -25,7 +25,13 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
 
 ## Structure
 
-- `app/layout.tsx` — fonts (Fraunces + Inter via `next/font`), SEO/OpenGraph metadata
-- `app/page.tsx` — page composition
-- `components/` — one component per section (`Nav`, `Hero`, `WhoIWorkWith`, `WhatIOffer`, `WhyWorkWithMe`, `HowItWorks`, `CTABand`, `Footer`) plus reusable pieces (`OfferCard`, `StatCard`, `StepCard`, `Eyebrow`, `LogoMark`, `EMonogram`)
+- `app/layout.tsx` — fonts (Fraunces + Inter via `next/font`), default SEO/OpenGraph metadata
+- `app/page.tsx` — homepage composition
+- `app/[slug]/page.tsx` — the five service pages, one static page per entry in `lib/services.ts`:
+  `/communications-strategy/`, `/communications-delivery/`, `/paid-promotions/`, `/team-development/`, `/ai-visibility/`
+- `app/sitemap.ts` — generates `sitemap.xml` for the homepage and service pages
+- `lib/services.ts` — all service copy (homepage card text, service page content, related links) and the contact email. Edit copy here.
+- `components/` — one component per homepage section (`Nav`, `Hero`, `WhatIOffer`, `WhyWorkWithMe`, `HowItWorks`, `CTABand`, `Footer`), the shared service page layout (`ServicePage`), plus reusable pieces (`OfferCard`, `StatCard`, `StepCard`, `Eyebrow`, `ServiceIcon`, `Arrow`, `LogoMark`, `EMonogram`). `WhoIWorkWith` is kept but no longer used on the homepage.
 - `tailwind.config.ts` — brand colour tokens: `teal-primary` (#1B4B4A), `teal-accent` (#2D6A69), `bg-light` (#F4F6F5), `ink` (#111827), `muted` (#4B5563), `teal-muted` (#CBD5D1)
+
+To add or change a service, edit `lib/services.ts`. Adding a new entry creates its page automatically; give it an icon in `components/ServiceIcon.tsx`.
